@@ -1,8 +1,6 @@
 #include <stdio.h>
 void ht(int n, int a, int b, int c) {
-	if (n == 1) {
-		printf("%d %d\n", a, c);
-	}
+	if (n == 0) return ;
 	else {
 		ht(n - 1, a, c, b);
 		printf("%d %d\n", a, c);
@@ -14,9 +12,6 @@ int main(void) {
 	int power = 1;
 	scanf_s("%d", &n);
 	int i;
-	for (i = 0; i < n; i++) {
-		power *= 2;
-	}
-	printf("%d\n", power - 1);
+	printf("%d\n", (1 << i) - 1);
 	ht(n, 1, 2, 3);
 }
